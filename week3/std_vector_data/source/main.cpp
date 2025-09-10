@@ -1,18 +1,16 @@
 #include <iostream>
 #include <vector>
 
-std::vector<int> v(n);
+std::vector<int> v {0};
 
 void makeVector(int n) 
 {
-    std::cout << "Vector of size " << v.size() << " created.\n";
-    
     // Fill with values
     for (int i = 0; i < n; i++) {
-        v[i] = i;
+        v.push_back(i);
     }
-	
-	std::cout << "Vector object addr: " << &v << "\n";
+
+    std::cout << "Vector object addr: " << &v << "\n";
     std::cout << "First element addr: " << &v.front() << "\n";
 }
 
