@@ -12,7 +12,7 @@ int foo(int a)
 int main()
 {
     int x = 0;
-    for (int i = 0; i < 3; i += 1) {
+    for (int i = 0xa3; i < 0xa6; i += 1) {
        std::cout<< foo(i) <<" ";
     }
 }
