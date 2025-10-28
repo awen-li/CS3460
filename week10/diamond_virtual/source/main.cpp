@@ -10,13 +10,13 @@ public:
     void start () {std::cout<<"Vehicle starts ....\n";}
 };
 
-class Car : public Vehicle 
+class Car : virtual public Vehicle 
 {
 public:
     Car() : Vehicle("Car") {}
 };
 
-class Airplane : public Vehicle 
+class Airplane : virtual public Vehicle 
 {
 public:
     Airplane() : Vehicle("Airplane") {}
@@ -24,7 +24,8 @@ public:
 
 class FlyingCar : public Car, public Airplane 
 {
-
+public:
+    FlyingCar():Vehicle("FlyingCar") {}
 };
 
 int main() {
